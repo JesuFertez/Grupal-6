@@ -32,12 +32,12 @@
 						href="Inicio"> <i class="bi bi-house"></i> Inicio
 					</a></li>
 					<li class="nav-item ms-2"><a
-						class="nav-link ${navItem == 'Contacto' ? 'active' : ''}"
+						class="nav-link disabled ${navItem == 'Contacto' ? 'active' : ''}"
 						href="Contacto"> <i class="bi bi-envelope-at"></i> Contacto
 					</a></li>
 
 					<li class="nav-item dropdown ms-2"><a
-						class="nav-link dropdown-toggle ${navItem == 'Crear' ? 'active' : ''}"
+						class="nav-link dropdown-toggle disabled ${navItem == 'Crear' ? 'active' : ''}"
 						id="navbarDropdown" role="button" data-bs-toggle="dropdown"
 						href="#"> <i class="bi bi-plus-circle"></i> Crear
 					</a>
@@ -62,29 +62,12 @@
 									<i class="bi bi-files"></i> Listar Capacitaciones</a>
 							</li>
 			            	 <li>
-			            	 	<a class="dropdown-item" href="ListadoUsuarios">
+			            	 	<a class="dropdown-item disabled" href="ListadoUsuarios">
 			            	 	<i class="bi bi-people"></i>  Listar Usuarios</a>
 			            	 </li>
 			            	 
 						</ul></li>
 				</ul>
-
-				<!-- 
-	    <ul class="navbar-nav flex-row flex-wrap text-light">
-			<li class="nav-item dropdown">
-				<a class="nav-link dropdown-toggle"
-				id="navbarDropdown" role="button" data-bs-toggle="dropdown"  href="#">
-					<i class="bi bi-person-circle"></i>   ${nombreUsuario}
-				</a>
-			    <ul class="dropdown-menu dropdown-menu-end bg-dark">
-			    	<li>
-			    		<a class="dropdown-item" href="CerrarSession">
-			    		<i class="bi bi-box-arrow-right"></i>   Cerrar Sesión</a>
-			    	</li>
-			    </ul>
-			</li>
-	    </ul>
-	     -->
 			</div>
 		</div>
 	</nav>
