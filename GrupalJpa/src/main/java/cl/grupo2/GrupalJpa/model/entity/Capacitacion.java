@@ -16,11 +16,13 @@ public class Capacitacion {
 	private int id;
 	private String nombre;
 	private String detalle;
-	private int rutCliente;
+	@Column(name="rut_cliente")
+	private int rutCliente ;
 	private String dia;
 	private String hora;
 	private String lugar;
 	private String duracion;
+	@Column(name="cantidad_asistentes")
 	private int cantidadAsistentes;
 
 	

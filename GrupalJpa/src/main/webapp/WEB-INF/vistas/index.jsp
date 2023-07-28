@@ -5,7 +5,6 @@
 <meta charset="ISO-8859-1">
 <title>Pagina de Inicio</title>
 <!-- Incluyendo estilos -->
-<%-- <!-- <%@include file="css-proyecto.jsp"%>--> --%>
 
 </head>
 <body>
