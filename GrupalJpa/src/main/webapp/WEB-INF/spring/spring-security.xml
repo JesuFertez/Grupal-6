@@ -9,7 +9,7 @@
 	<http auto-config="true">
 		<intercept-url pattern="/" access="permitAll" />
 		<intercept-url pattern="/ListarCapacitaciones"
-			access="hasAnyAuthority('ADMIN')" />
+			access="hasAnyAuthority('ADMIN','CLIENTE')" />
 		<intercept-url pattern="/Contacto"
 			access="hasAnyAuthority('CLIENTE')" />
 	</http>
