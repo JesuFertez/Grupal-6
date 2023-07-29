@@ -1,4 +1,5 @@
 <%@ taglib prefix="core" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags"%>
 
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
@@ -32,11 +33,13 @@
 						href="Inicio"> <i class="bi bi-house"></i> Inicio
 					</a></li>
 					<li class="nav-item ms-2"><a
-						class="nav-link disabled ${navItem == 'Contacto' ? 'active' : ''}"
+						class="nav-link ${navItem == 'Contacto' ? 'active' : ''}"
 						href="Contacto"> <i class="bi bi-envelope-at"></i> Contacto
 					</a></li>
-
-					<li class="nav-item dropdown ms-2"><a
+					 
+					<sec:authorize access="hasAuthority('ADMIN')">
+					<li class="nav-item dropdown ms-2">
+					<a
 						class="nav-link dropdown-toggle disabled ${navItem == 'Crear' ? 'active' : ''}"
 						id="navbarDropdown" role="button" data-bs-toggle="dropdown"
 						href="#"> <i class="bi bi-plus-circle"></i> Crear
@@ -52,6 +55,8 @@
 								</a>
 							</li>
 						</ul>
+						</li>
+						</sec:authorize>
 						<li class="nav-item dropdown ms-2"><a
 						class="nav-link dropdown-toggle ${navItem == 'Listar' ? 'active' : ''}"
 						id="navbarDropdown" role="button" data-bs-toggle="dropdown"
