@@ -66,31 +66,30 @@
 						           href="#"> <i class="bi bi-card-list"></i> Listar
 						        </a>
 						    </sec:authorize>
-						    <sec:authorize access="hasAnyAuthority('ADMIN', 'CLIENTE')">
 						        <ul class="dropdown-menu bg-dark">
+						        <sec:authorize access="hasAnyAuthority('ADMIN', 'CLIENTE')">
 						            <li>
 						                <a class="dropdown-item" href="ListarCapacitaciones">
 						                    <i class="bi bi-files"></i> Listar Capacitaciones
 						                </a>
 						            </li>
+						   		 </sec:authorize>
+						   		 <sec:authorize access="hasAnyAuthority('ADMIN')">
 						            <li>
 						                <a class="dropdown-item disabled" href="ListadoUsuarios">
 						                    <i class="bi bi-people"></i>  Listar Usuarios
 						                </a>
 						            </li>
+						        </sec:authorize>
 						        </ul>
-						    </sec:authorize>
 						</li>
-
+						<sec:authorize access="!isAuthenticated()">
+								<li class="nav-item flex-row flex-wrap text-light">
+						    		<a class="nav-link " href="login">
+						    		<i class="bi bi-box-arrow-in-left ms-2"></i> Login</a>
+						    	</li>
+				    	</sec:authorize>
 				</ul>
-				<sec:authorize access="!isAuthenticated()">
-					<ul class="navbar-nav flex-row flex-wrap text-light">
-						<li class="nav-item">
-				    		<a class="nav-link " href="login">
-				    		<i class="bi bi-box-arrow-in-left ms-2"></i> Login</a>
-				    	</li>
-			    	</ul>
-		    	</sec:authorize>
 				<sec:authorize access="isAuthenticated()">
 					<ul class="navbar-nav flex-row flex-wrap text-light">
 						<li class="nav-item dropdown">
