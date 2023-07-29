@@ -12,57 +12,44 @@ import cl.grupo2.GrupalJpa.utils.ValidarDatos;
 public class Capacitacion {
 
 	@Id
-	@Column(name="id")
-	private int id;
+	@Column(name="Id")
+	private int Id;
 	private String nombre;
 	private String detalle;
 	@Column(name="rut_cliente")
-	private int rutCliente ;
+	private int rut_cliente ;
 	private String dia;
 	private String hora;
 	private String lugar;
 	private String duracion;
 	@Column(name="cantidad_asistentes")
-	private int cantidadAsistentes;
+	private int cantidad_asistentes;
 
 	
 	public Capacitacion() {
 	}
 	//Constructor formulario
-	public Capacitacion(String nombre, String detalle, int rutCliente, String dia, String hora, String lugar,
-			String duracion, int cantidadAsistentes) {
+	public Capacitacion(String nombre, String detalle, int rut_cliente, String dia, String hora, String lugar,
+			String duracion, int cantidad_asistentes) {
 		super();
 		setNombre(nombre);
 		setDetalle(detalle);
-		setRutCliente(rutCliente);
+		setRutCliente(rut_cliente);
 		setDia(dia);
 		setHora(hora);
 		setLugar(lugar);
 		setDuracion(duracion);
-		setCantidadAsistentes(cantidadAsistentes);
+		setCantidadAsistentes(cantidad_asistentes);
 	}
-	//Constructor DAO
-	public Capacitacion(int id, String nombre, String detalle, int rutCliente, String dia, String hora, String lugar,
-			String duracion, int cantidadAsistentes) {
-		super();
-		setId(id);
-		setNombre(nombre);
-		setDetalle(detalle);
-		setRutCliente(rutCliente);
-		setDia(dia);
-		setHora(hora);
-		setLugar(lugar);
-		setDuracion(duracion);
-		setCantidadAsistentes(cantidadAsistentes);
-	}
+	
 
 	public int getId() {
-		return id;
+		return Id;
 	}
 
 	public void setId(int id) {
 		if(ValidarDatos.esObligatorio(String.valueOf(id))) {
-			this.id = id;			
+			this.Id = id;			
 		}
 	}
 	public String getNombre() {
@@ -86,12 +73,12 @@ public class Capacitacion {
 	}
 
 	public int getRutCliente() {
-		return rutCliente;
+		return rut_cliente;
 	}
 
 	public void setRutCliente(int rutCliente) {
 		if(ValidarDatos.esObligatorio(String.valueOf(rutCliente))) {			
-			this.rutCliente = rutCliente;
+			this.rut_cliente = rutCliente;
 		}
 	}
 
@@ -135,20 +122,20 @@ public class Capacitacion {
 	}
 
 	public int getCantidadAsistentes() {
-		return cantidadAsistentes;
+		return cantidad_asistentes;
 	}
 
 	public void setCantidadAsistentes(int cantidadAsistentes) {
 		if(ValidarDatos.Numero(String.valueOf(cantidadAsistentes), 0, 1000)) {
-			this.cantidadAsistentes = cantidadAsistentes;			
+			this.cantidad_asistentes = cantidadAsistentes;			
 		}
 	}
 
 	@Override
 	public String toString() {
-		return "Capacitacion [id=" + id + ", nombre=" + nombre + ", detalle=" + detalle + ", rutCliente=" + rutCliente
+		return "Capacitacion [id=" + Id + ", nombre=" + nombre + ", detalle=" + detalle + ", rutCliente=" + rut_cliente
 				+ ", dia=" + dia + ", hora=" + hora + ", lugar=" + lugar + ", duracion=" + duracion
-				+ ", cantidadAsistentes=" + cantidadAsistentes + "]";
+				+ ", cantidadAsistentes=" + cantidad_asistentes + "]";
 	}
 	
 	

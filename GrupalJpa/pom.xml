@@ -45,174 +45,204 @@
 
 	<!-- Información de el o los Desarrolladores -->
 	<developers>
-		 <!-- Ejemplo -->
-        <developer>
-            <!-- Correo electrónico -->
-            <email>awaker@awakelab.cl</email>
+		<!-- Ejemplo -->
+		<developer>
+			<!-- Correo electrónico -->
+			<email>awaker@awakelab.cl</email>
 
-            <!-- Identificador único (Nombre de usuario, nickname, etc.) -->
-            <id>Awaker</id>
+			<!-- Identificador único (Nombre de usuario, nickname, etc.) -->
+			<id>Awaker</id>
 
-            <!-- Nombre Completo o Parcial -->
-            <name>Awaker Awakerino</name>
+			<!-- Nombre Completo o Parcial -->
+			<name>Awaker Awakerino</name>
 
-            <!-- Zona horaria donde te encuentras -->
-            <timezone>America/Santiago</timezone>
+			<!-- Zona horaria donde te encuentras -->
+			<timezone>America/Santiago</timezone>
 
-            <!-- Roles del desarrollador -->
-            <roles>
-                <role>Developer</role>
-                <role>Architect</role>
-                <role>DBA</role>
-                <role>...</role>
-            </roles>
-        </developer>
-    </developers>
+			<!-- Roles del desarrollador -->
+			<roles>
+				<role>Developer</role>
+				<role>Architect</role>
+				<role>DBA</role>
+				<role>...</role>
+			</roles>
+		</developer>
+	</developers>
 
-    <!-- Dependencias -->
-    <dependencies>
-        <!-- Spring Framework: Context > https://mvnrepository.com/artifact/org.springframework/spring-context -->
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-context</artifactId>
-            <version>${org.springframework-version}</version>
-        </dependency>
-
-        <!-- Spring Framework: WebMVC > https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-webmvc</artifactId>
-            <version>${org.springframework-version}</version>
-        </dependency>
-
-        <!-- Java Servlet API > https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>javax.servlet-api</artifactId>
-            <version>${javax.servlet-api-version}</version>
-            <scope>provided</scope>
-        </dependency>
-
-        <!-- JavaServer Pages API > https://mvnrepository.com/artifact/javax.servlet.jsp/javax.servlet.jsp-api -->
-        <dependency>
-            <groupId>javax.servlet.jsp</groupId>
-            <artifactId>javax.servlet.jsp-api</artifactId>
-            <version>${javax.servlet.jsp-api-version}</version>
-            <scope>provided</scope>
-        </dependency>
-
-        <!-- Java Standard Tag Library > https://mvnrepository.com/artifact/javax.servlet/jstl -->
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>jstl</artifactId>
-            <version>${javax.servlet.jstl-version}</version>
-        </dependency>
-        
-        <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+	<!-- Dependencias -->
+	<dependencies>
+		<!-- Spring Framework: Context >
+		https://mvnrepository.com/artifact/org.springframework/spring-context -->
 		<dependency>
-		    <groupId>mysql</groupId>
-		    <artifactId>mysql-connector-java</artifactId>
-		    <version>8.0.28</version>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${org.springframework-version}</version>
 		</dependency>
-		
-		<!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-jpa -->
+
+		<!-- Spring Framework: WebMVC >
+		https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
 		<dependency>
-		    <groupId>org.springframework.data</groupId>
-		    <artifactId>spring-data-jpa</artifactId>
-		    <version>2.4.3</version>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>${org.springframework-version}</version>
 		</dependency>
-		
+
+		<!-- Java Servlet API >
+		https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>${javax.servlet-api-version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- JavaServer Pages API >
+		https://mvnrepository.com/artifact/javax.servlet.jsp/javax.servlet.jsp-api -->
+		<dependency>
+			<groupId>javax.servlet.jsp</groupId>
+			<artifactId>javax.servlet.jsp-api</artifactId>
+			<version>${javax.servlet.jsp-api-version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- Java Standard Tag Library >
+		https://mvnrepository.com/artifact/javax.servlet/jstl -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>${javax.servlet.jstl-version}</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.28</version>
+		</dependency>
+
+		<!--
+		https://mvnrepository.com/artifact/org.springframework.data/spring-data-jpa -->
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-jpa</artifactId>
+			<version>2.4.3</version>
+		</dependency>
+
 		<!-- https://mvnrepository.com/artifact/org.springframework/spring-tx -->
 		<dependency>
-		    <groupId>org.springframework</groupId>
-		    <artifactId>spring-tx</artifactId>
-		    <version>${org.springframework-version}</version>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-tx</artifactId>
+			<version>${org.springframework-version}</version>
 		</dependency>
-		
-		<!-- https://mvnrepository.com/artifact/javax.persistence/javax.persistence-api -->
+
+		<!--
+		https://mvnrepository.com/artifact/javax.persistence/javax.persistence-api -->
 		<dependency>
-		    <groupId>javax.persistence</groupId>
-		    <artifactId>javax.persistence-api</artifactId>
-		    <version>2.2</version>
+			<groupId>javax.persistence</groupId>
+			<artifactId>javax.persistence-api</artifactId>
+			<version>2.2</version>
 		</dependency>
-		
+
 		<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
 		<dependency>
-		    <groupId>org.hibernate</groupId>
-		    <artifactId>hibernate-core</artifactId>
-		    <version>5.4.27.Final</version>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>5.4.27.Final</version>
 		</dependency>
-		
-		<!-- https://mvnrepository.com/artifact/org.hibernate.javax.persistence/hibernate-jpa-2.1-api -->
+
+		<!--
+		https://mvnrepository.com/artifact/org.hibernate.javax.persistence/hibernate-jpa-2.1-api -->
 		<dependency>
-		    <groupId>org.hibernate.javax.persistence</groupId>
-		    <artifactId>hibernate-jpa-2.1-api</artifactId>
-		    <version>1.0.2.Final</version>
+			<groupId>org.hibernate.javax.persistence</groupId>
+			<artifactId>hibernate-jpa-2.1-api</artifactId>
+			<version>1.0.2.Final</version>
 		</dependency>
-		
+
 		<!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
 		<dependency>
-		    <groupId>org.springframework</groupId>
-		    <artifactId>spring-jdbc</artifactId>
-		    <version>${org.springframework-version}</version>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+			<version>${org.springframework-version}</version>
 		</dependency>
-		
+
 		<!-- https://mvnrepository.com/artifact/org.springframework/spring-orm -->
 		<dependency>
-		    <groupId>org.springframework</groupId>
-		    <artifactId>spring-orm</artifactId>
-		    <version>${org.springframework-version}</version>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+			<version>${org.springframework-version}</version>
 		</dependency>
 
-        <!-- JUnit Jupiter API > https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-api</artifactId>
-            <version>${org.junit.jupiter-version}</version>
-            <scope>test</scope>
-        </dependency>
-    </dependencies>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-core</artifactId>
+			<version>${org.springframework-version}</version>
+		</dependency>
 
-    <build>
-        <!-- Nombre del archivo final de empaquetado -->
-        <finalName>${project.artifactId}-${project.version}</finalName>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-web</artifactId>
+			<version>${org.springframework-version}</version>
+		</dependency>
 
-        <!-- Listado de Plugins a utilizar -->
-        <plugins>
-            <plugin>
-                <artifactId>maven-eclipse-plugin</artifactId>
-                <version>2.10</version>
-                <configuration>
-                    <additionalProjectnatures>
-                        <projectnature>org.springframework.ide.eclipse.core.springnature</projectnature>
-                    </additionalProjectnatures>
-                    <additionalBuildcommands>
-                        <buildcommand>org.springframework.ide.eclipse.core.springbuilder</buildcommand>
-                    </additionalBuildcommands>
-                    <downloadSources>true</downloadSources>
-                    <downloadJavadocs>true</downloadJavadocs>
-                </configuration>
-            </plugin>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-config</artifactId>
+			<version>${org.springframework-version}</version>
+		</dependency>
 
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version>
-                <configuration>
-                    <compilerArgument>-Xlint:all</compilerArgument>
-                    <showWarnings>true</showWarnings>
-                    <showDeprecation>true</showDeprecation>
-                </configuration>
-            </plugin>
 
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>exec-maven-plugin</artifactId>
-                <version>3.0.0</version>
-                <configuration>
-                    <mainClass>org.test.int1.Main</mainClass>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
+		<!-- JUnit Jupiter API >
+		https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-api</artifactId>
+			<version>${org.junit.jupiter-version}</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<!-- Nombre del archivo final de empaquetado -->
+		<finalName>${project.artifactId}-${project.version}</finalName>
+
+		<!-- Listado de Plugins a utilizar -->
+		<plugins>
+			<plugin>
+				<artifactId>maven-eclipse-plugin</artifactId>
+				<version>2.10</version>
+				<configuration>
+					<additionalProjectnatures>
+						<projectnature>
+							org.springframework.ide.eclipse.core.springnature</projectnature>
+					</additionalProjectnatures>
+					<additionalBuildcommands>
+						<buildcommand>
+							org.springframework.ide.eclipse.core.springbuilder</buildcommand>
+					</additionalBuildcommands>
+					<downloadSources>true</downloadSources>
+					<downloadJavadocs>true</downloadJavadocs>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.1</version>
+				<configuration>
+					<compilerArgument>-Xlint:all</compilerArgument>
+					<showWarnings>true</showWarnings>
+					<showDeprecation>true</showDeprecation>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<version>3.0.0</version>
+				<configuration>
+					<mainClass>org.test.int1.Main</mainClass>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 </project>
