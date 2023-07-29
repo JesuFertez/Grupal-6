@@ -10,6 +10,8 @@
 		<intercept-url pattern="/" access="permitAll" />
 		<intercept-url pattern="/ListarCapacitaciones"
 			access="hasAnyAuthority('ADMIN')" />
+		<intercept-url pattern="/Contacto"
+			access="hasAnyAuthority('CLIENTE')" />
 	</http>
 
 	<authentication-manager>
@@ -18,7 +20,7 @@
 			<user-service>
 				<user name="Admin" authorities="ADMIN"
 					password="$2a$10$JjF53QXqvUX08G9LPMBC8uJFQJHIg2eDEfrPhF1j4UAwIy2pXajOe" />
-					<user name="Cliente" authorities="ADMIN"
+				<user name="Cliente" authorities="CLIENTE"
 					password="$2a$10$xvF3SGtY./y5TsayR5q8v.kIMzbFFw1koxye1n5ZF/rod2i.FZfGS" />
 					
 			</user-service>
