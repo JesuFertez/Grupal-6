@@ -32,14 +32,14 @@
 						class="nav-link ${navItem == 'Inicio' ? 'active' : ''}"
 						href="Inicio"> <i class="bi bi-house"></i> Inicio
 					</a></li>
-					<sec:authorize access="hasAuthority('CLIENTE')">
+					<sec:authorize access="hasAuthority('Cliente')">
 						<li class="nav-item ms-2"><a
 							class="nav-link ${navItem == 'Contacto' ? 'active' : ''}"
 							href="Contacto"> <i class="bi bi-envelope-at"></i> Contacto
 						</a></li>
 					</sec:authorize>
 					 
-					<sec:authorize access="hasAuthority('ADMIN')">
+					<sec:authorize access="hasAuthority('Administrativo')">
 					<li class="nav-item dropdown ms-2">
 					<a
 						class="nav-link dropdown-toggle disabled ${navItem == 'Crear' ? 'active' : ''}"
@@ -60,21 +60,21 @@
 						</li>
 						</sec:authorize>
 						<li class="nav-item dropdown ms-2">
-						    <sec:authorize access="hasAnyAuthority('ADMIN', 'CLIENTE')">
+						    <sec:authorize access="hasAnyAuthority('Administrativo', 'Cliente')">
 						        <a class="nav-link dropdown-toggle ${navItem == 'Listar' ? 'active' : ''}"
 						           id="navbarDropdown" role="button" data-bs-toggle="dropdown"
 						           href="#"> <i class="bi bi-card-list"></i> Listar
 						        </a>
 						    </sec:authorize>
 						        <ul class="dropdown-menu bg-dark">
-						        <sec:authorize access="hasAnyAuthority('ADMIN', 'CLIENTE')">
+						        <sec:authorize access="hasAnyAuthority('Administrativo', 'Cliente')">
 						            <li>
 						                <a class="dropdown-item" href="ListarCapacitaciones">
 						                    <i class="bi bi-files"></i> Listar Capacitaciones
 						                </a>
 						            </li>
 						   		 </sec:authorize>
-						   		 <sec:authorize access="hasAnyAuthority('ADMIN')">
+						   		 <sec:authorize access="hasAnyAuthority('Administrativo')">
 						            <li>
 						                <a class="dropdown-item disabled" href="ListadoUsuarios">
 						                    <i class="bi bi-people"></i>  Listar Usuarios

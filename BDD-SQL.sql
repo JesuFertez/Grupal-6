@@ -205,7 +205,7 @@ DROP TABLE IF EXISTS `Usuarios`;
 CREATE TABLE `Usuarios` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(100) NOT NULL,
-  `contrasena` varchar(20) NOT NULL,
+  `contrasena` varchar(100) NOT NULL,
   `tipo` enum('Cliente','Administrativo','Profesional') NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -216,15 +216,15 @@ LOCK TABLES `Usuarios` WRITE;
 ALTER TABLE `Usuarios` AUTO_INCREMENT = 1;
 
 INSERT INTO usuarios (`nombre`, `contrasena`, `tipo`) VALUES
-('Juan', 'password1', 'Cliente'),
-('María', 'password2', 'Cliente'),
-('Carlos', 'password3', 'Cliente'),
-('Pedro', 'password11', 'Administrativo'),
-('Marta', 'password12', 'Administrativo'),
-('Pablo', 'password13', 'Administrativo'),
-('Gabriel', 'password21', 'Profesional'),
-('Natalia', 'password22', 'Profesional'),
-('Martín', 'password23', 'Profesional');
+('Juan', '$2a$10$7lgm/idmFqa7zDdxKICTyeqyEvWb/7gqyRoDFfPgyh9OHDaw4K89K', 'Cliente'),
+('María', '$2a$10$7lgm/idmFqa7zDdxKICTyeqyEvWb/7gqyRoDFfPgyh9OHDaw4K89K', 'Cliente'),
+('Carlos', '$2a$10$7lgm/idmFqa7zDdxKICTyeqyEvWb/7gqyRoDFfPgyh9OHDaw4K89K', 'Cliente'),
+('Pedro', '$2a$10$7lgm/idmFqa7zDdxKICTyeqyEvWb/7gqyRoDFfPgyh9OHDaw4K89K', 'Administrativo'),
+('Marta', '$2a$10$7lgm/idmFqa7zDdxKICTyeqyEvWb/7gqyRoDFfPgyh9OHDaw4K89K', 'Administrativo'),
+('Pablo', '$2a$10$7lgm/idmFqa7zDdxKICTyeqyEvWb/7gqyRoDFfPgyh9OHDaw4K89K', 'Administrativo'),
+('Gabriel', '$2a$10$7lgm/idmFqa7zDdxKICTyeqyEvWb/7gqyRoDFfPgyh9OHDaw4K89K', 'Profesional'),
+('Natalia', '$2a$10$7lgm/idmFqa7zDdxKICTyeqyEvWb/7gqyRoDFfPgyh9OHDaw4K89K', 'Profesional'),
+('Martín', '$2a$10$7lgm/idmFqa7zDdxKICTyeqyEvWb/7gqyRoDFfPgyh9OHDaw4K89K', 'Profesional');
 UNLOCK TABLES;
 
 --
