@@ -12,6 +12,12 @@
 			access="hasAnyAuthority('ADMIN','CLIENTE')" />
 		<intercept-url pattern="/Contacto"
 			access="hasAnyAuthority('CLIENTE')" />
+			<form-login login-page="/login"
+				authentication-failure-url="/error" 
+				username-parameter="usuario"
+				password-parameter="password"/>
+		<csrf disabled="true" />
+		<logout logout-success-url="/login" />
 	</http>
 
 	<authentication-manager>
