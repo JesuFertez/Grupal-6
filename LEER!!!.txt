@@ -1,0 +1,6 @@
+---------------------------------------------
+Se modificó la base de datos para soportar el rango de caracteres de bcrypt en las contraseñas de los usuarios.
+
+- Se recomienda ELIMINAR LA BASE DE DATOS ANTERIOR Y EJECUTAR EL SCRIPT ACTUAL.
+
+---------------------------------------------
