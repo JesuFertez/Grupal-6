@@ -16,7 +16,8 @@ public class Usuario {
 	private String nombreUsuario;
 	@Column(name="contrasena")
 	private String contraseña;
-	private TipoUsuario tipo;
+	@Column(name="tipo")
+	private String tipo;
 	
 	public Usuario() {}
 	
@@ -32,28 +33,22 @@ public class Usuario {
 		this.nombreUsuario=nombreUsuario;
 	}
 	
-	public Usuario(int id,TipoUsuario tipo) {
-		super();
-		this.id = id;
-		this.tipo = tipo;
-		
-	}
 
-	public Usuario(int id, String nombreUsuario, TipoUsuario tipo) {
+	public Usuario(int id, String nombreUsuario, String tipo) {
 		super();
 		this.id = id;
 		this.nombreUsuario = nombreUsuario;
 		this.tipo = tipo;
 	}
 
-	public Usuario(String nombreUsuario, String contraseña, TipoUsuario tipo) {
+	public Usuario(String nombreUsuario, String contraseña, String tipo) {
 		super();
 		this.nombreUsuario = nombreUsuario;
 		this.contraseña= contraseña;
 		this.tipo = tipo;
 	}
 	
-	public Usuario(int id, String nombreUsuario, String contraseña, TipoUsuario tipo) {
+	public Usuario(int id, String nombreUsuario, String contraseña, String tipo) {
 		super();
 		this.id = id;
 		this.nombreUsuario = nombreUsuario;
@@ -82,10 +77,10 @@ public class Usuario {
 		this.contraseña = contraseña;
 	}
 
-	public TipoUsuario getTipo() {
+	public String getTipo() {
 		return tipo;
 	}
-	public void setTipo(TipoUsuario tipo) {
+	public void setTipo(String tipo) {
 		this.tipo = tipo;
 	}
 
