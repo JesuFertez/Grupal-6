@@ -2,6 +2,8 @@ package cl.grupo2.GrupalJpa.model.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -16,8 +18,8 @@ public class Usuario {
 	private String nombreUsuario;
 	@Column(name="contrasena")
 	private String contraseña;
-	@Column(name="tipo")
-	private String tipo;
+	@Enumerated(EnumType.STRING)
+	private TipoUsuario tipo;
 	
 	public Usuario() {}
 	
@@ -34,21 +36,21 @@ public class Usuario {
 	}
 	
 
-	public Usuario(int id, String nombreUsuario, String tipo) {
+	public Usuario(int id, String nombreUsuario, TipoUsuario tipo) {
 		super();
 		this.id = id;
 		this.nombreUsuario = nombreUsuario;
 		this.tipo = tipo;
 	}
 
-	public Usuario(String nombreUsuario, String contraseña, String tipo) {
+	public Usuario(String nombreUsuario, String contraseña, TipoUsuario tipo) {
 		super();
 		this.nombreUsuario = nombreUsuario;
 		this.contraseña= contraseña;
 		this.tipo = tipo;
 	}
 	
-	public Usuario(int id, String nombreUsuario, String contraseña, String tipo) {
+	public Usuario(int id, String nombreUsuario, String contraseña, TipoUsuario tipo) {
 		super();
 		this.id = id;
 		this.nombreUsuario = nombreUsuario;
@@ -77,10 +79,10 @@ public class Usuario {
 		this.contraseña = contraseña;
 	}
 
-	public String getTipo() {
+	public TipoUsuario getTipo() {
 		return tipo;
 	}
-	public void setTipo(String tipo) {
+	public void setTipo(TipoUsuario tipo) {
 		this.tipo = tipo;
 	}
 

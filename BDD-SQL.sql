@@ -206,7 +206,7 @@ CREATE TABLE `Usuarios` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(100) NOT NULL,
   `contrasena` varchar(100) NOT NULL,
-  `tipo` varchar(25) NOT NULL,
+  `tipo` enum('Cliente','Administrativo','Profesional') NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
