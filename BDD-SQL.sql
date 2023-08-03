@@ -206,7 +206,7 @@ CREATE TABLE `Usuarios` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(100) NOT NULL,
   `contrasena` varchar(100) NOT NULL,
-  `tipo` enum('Cliente','Administrativo','Profesional') NOT NULL,
+  `rol` enum('Cliente','Administrativo','Profesional') NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -215,7 +215,7 @@ LOCK TABLES `Usuarios` WRITE;
 /*!40000 ALTER TABLE `Usuarios` DISABLE KEYS */;
 ALTER TABLE `Usuarios` AUTO_INCREMENT = 1;
 
-INSERT INTO usuarios (`nombre`, `contrasena`, `tipo`) VALUES
+INSERT INTO usuarios (`nombre`, `contrasena`, `rol`) VALUES
 ('Juan', '$2a$10$7lgm/idmFqa7zDdxKICTyeqyEvWb/7gqyRoDFfPgyh9OHDaw4K89K', 'Cliente'),
 ('María', '$2a$10$7lgm/idmFqa7zDdxKICTyeqyEvWb/7gqyRoDFfPgyh9OHDaw4K89K', 'Cliente'),
 ('Carlos', '$2a$10$7lgm/idmFqa7zDdxKICTyeqyEvWb/7gqyRoDFfPgyh9OHDaw4K89K', 'Cliente'),

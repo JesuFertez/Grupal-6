@@ -22,7 +22,7 @@ public class UsuarioServicio {
 	}
 	
 	public Usuario obtenerUsuario(int id) {
-		return userRepo.getOne(id);
+		return userRepo.findById(id).get();
 	}
 	
 	public void crearUsuario(Usuario usu) {

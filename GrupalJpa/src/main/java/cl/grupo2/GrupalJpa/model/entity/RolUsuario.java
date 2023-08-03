@@ -1,11 +1,11 @@
 package cl.grupo2.GrupalJpa.model.entity;
 
-public enum TipoUsuario {
+public enum RolUsuario {
 	Cliente,
 	Administrativo,
 	Profesional;
 	
-public static TipoUsuario parse(String text) {
+public static RolUsuario parse(String text) {
 		
 		if(Cliente.name().equalsIgnoreCase(text)) {
 			return Cliente;

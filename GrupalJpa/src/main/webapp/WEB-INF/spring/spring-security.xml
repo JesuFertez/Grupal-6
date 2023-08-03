@@ -12,6 +12,8 @@
 			access="hasAnyAuthority('Administrativo','Cliente')" />
 		<intercept-url pattern="/Contacto"
 			access="hasAnyAuthority('Cliente')" />
+		<intercept-url pattern="/api/**"
+			access="hasAnyAuthority('Administrativo')" />
 			<form-login login-page="/login"
 				authentication-failure-url="/error" 
 				username-parameter="usuario"
@@ -25,7 +27,7 @@
 			<password-encoder hash="bcrypt" />
 			<jdbc-user-service data-source-ref="ds"
 				users-by-username-query="SELECT nombre as usuario, contrasena as password, 1 as enabled from usuarios where nombre= ?"
-				authorities-by-username-query="SELECT nombre as usuario, tipo as authority from usuarios where nombre= ?"/>
+				authorities-by-username-query="SELECT nombre as usuario, rol as authority from usuarios where nombre= ?"/>
 			<!-- <user-service>
 				<user name="Admin" authorities="ADMIN"
 					password="$2a$10$JjF53QXqvUX08G9LPMBC8uJFQJHIg2eDEfrPhF1j4UAwIy2pXajOe" />
