@@ -5,10 +5,13 @@ import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.Id;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
 import javax.persistence.Table;
 
 @Entity
 @Table(name="usuarios")
+@Inheritance(strategy = InheritanceType.JOINED)
 public class Usuario {
 	
 	@Id
@@ -19,7 +22,7 @@ public class Usuario {
 	@Column(name="contrasena")
 	private String contraseña;
 	@Enumerated(EnumType.STRING)
-	private TipoUsuario tipo;
+	private RolUsuario rol;
 	
 	public Usuario() {}
 	
@@ -36,26 +39,26 @@ public class Usuario {
 	}
 	
 
-	public Usuario(int id, String nombreUsuario, TipoUsuario tipo) {
+	public Usuario(int id, String nombreUsuario, RolUsuario rol) {
 		super();
 		this.id = id;
 		this.nombreUsuario = nombreUsuario;
-		this.tipo = tipo;
+		this.rol = rol;
 	}
 
-	public Usuario(String nombreUsuario, String contraseña, TipoUsuario tipo) {
+	public Usuario(String nombreUsuario, String contraseña, RolUsuario rol) {
 		super();
 		this.nombreUsuario = nombreUsuario;
 		this.contraseña= contraseña;
-		this.tipo = tipo;
+		this.rol = rol;
 	}
 	
-	public Usuario(int id, String nombreUsuario, String contraseña, TipoUsuario tipo) {
+	public Usuario(int id, String nombreUsuario, String contraseña, RolUsuario rol) {
 		super();
 		this.id = id;
 		this.nombreUsuario = nombreUsuario;
 		this.contraseña= contraseña;
-		this.tipo = tipo;
+		this.rol = rol;
 	}
 	
 	public int getId() {
@@ -79,16 +82,16 @@ public class Usuario {
 		this.contraseña = contraseña;
 	}
 
-	public TipoUsuario getTipo() {
-		return tipo;
+	public RolUsuario getRol() {
+		return rol;
 	}
-	public void setTipo(TipoUsuario tipo) {
-		this.tipo = tipo;
+	public void setRol(RolUsuario rol) {
+		this.rol = rol;
 	}
 
 	@Override
 	public String toString() {
-		return "Usuario [id=" + id + ", nombreUsuario=" + nombreUsuario + ", tipo=" + tipo + ", contraseña=" + contraseña + "]";
+		return "Usuario [id=" + id + ", nombreUsuario=" + nombreUsuario + ", rol=" + rol + ", contraseña=" + contraseña + "]";
 	}
 	
 }
