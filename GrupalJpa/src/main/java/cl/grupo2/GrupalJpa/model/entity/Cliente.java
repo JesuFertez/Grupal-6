@@ -1,10 +1,8 @@
 package cl.grupo2.GrupalJpa.model.entity;
 
-import java.time.LocalDate;
+
 
 import javax.persistence.Entity;
-import javax.persistence.Inheritance;
-import javax.persistence.InheritanceType;
 import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 

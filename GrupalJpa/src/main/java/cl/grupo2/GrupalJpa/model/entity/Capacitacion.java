@@ -17,7 +17,7 @@ public class Capacitacion {
 	private String nombre;
 	private String detalle;
 	@Column(name="rut_cliente")
-	private int rut_cliente ;
+	private int rut_cliente;
 	private String dia;
 	private String hora;
 	private String lugar;

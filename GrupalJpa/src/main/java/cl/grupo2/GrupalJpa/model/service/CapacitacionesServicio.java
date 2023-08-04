@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 import cl.grupo2.GrupalJpa.model.entity.Capacitacion;
 import cl.grupo2.GrupalJpa.model.repository.ICapacitacionesRepository;
 
-
 @Service
 public class CapacitacionesServicio {
 
@@ -24,7 +23,7 @@ public class CapacitacionesServicio {
 	}
 	
 	public Capacitacion obtenerCapacitacion(int id) {
-		return capaRepo.getOne(id);
+		return capaRepo.findById(id).get();
 	}
 	
 	public void crearCapacitacion(Capacitacion cap) {
