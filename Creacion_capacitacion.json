@@ -1,0 +1,11 @@
+{
+    "nombre": "vista de horas",
+    "detalle": "loreipsum.",
+    "rutCliente":32145654,
+    "dia": "Lunes",
+    "hora": "20:30",
+    "lugar": "Cede central",
+    "duracion": "2 horas",
+    "cantidadAsistentes":"90"
+
+}

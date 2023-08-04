@@ -18,8 +18,8 @@
     <bean id="ds" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 	  <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"></property>
 	  <property name="url" value="jdbc:mysql://localhost:3306/prevencion_riesgos"></property>
-	  <property name="username" value="adminp"></property>
-	  <property name="password" value="12345"></property> 
+	  <property name="username" value="root"></property>
+	  <property name="password" value=""></property> 
 	 </bean>
 	 
 	 <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
