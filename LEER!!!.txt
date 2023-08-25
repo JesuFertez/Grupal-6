@@ -3,4 +3,9 @@ Se modificó la base de datos para soportar el rango de caracteres de bcrypt en 
 
 - Se recomienda ELIMINAR LA BASE DE DATOS ANTERIOR Y EJECUTAR EL SCRIPT ACTUAL.
 
+-TODAS LAS CONTRASEÑAS SON "1234"
+Ejemplo con un usuario ya registrado:
+ROL: Administrativo
+USUARIO; Pedro
+CONTRASEÑA: 1234
 ---------------------------------------------
