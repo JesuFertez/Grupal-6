@@ -3,10 +3,12 @@ package cl.grupo2.GrupalJpa.model.service;
 import java.util.ArrayList;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import cl.grupo2.GrupalJpa.model.entity.Cliente;
 import cl.grupo2.GrupalJpa.model.repository.IClienteRepository;
 
+@Service
 public class ClienteServicio {
 
 	public ClienteServicio() {

@@ -42,7 +42,7 @@
 					<sec:authorize access="hasAuthority('Administrativo')">
 					<li class="nav-item dropdown ms-2">
 					<a
-						class="nav-link dropdown-toggle disabled ${navItem == 'Crear' ? 'active' : ''}"
+						class="nav-link dropdown-toggle ${navItem == 'Crear' ? 'active' : ''}"
 						id="navbarDropdown" role="button" data-bs-toggle="dropdown"
 						href="#"> <i class="bi bi-plus-circle"></i> Crear
 					</a>
@@ -51,11 +51,6 @@
 							<li><a class="dropdown-item" href="CrearCapacitacion"> <i
 									class="bi bi-file-plus"></i> Crear Capacitación
 							</a></li>
-							<li>
-								<a class="dropdown-item" href="CrearUsuario"> <i
-									class="bi bi-file-plus"></i> Crear Usuario
-								</a>
-							</li>
 						</ul>
 						</li>
 						</sec:authorize>
